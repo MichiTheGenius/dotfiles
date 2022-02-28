@@ -1,0 +1,15 @@
+[user]
+	name = MichiTheGenius
+	email = litzinger04@gmail.com
+[core]
+	editor = vim
+[alias]
+	s = status
+	ca = !git add . && git commit
+	cob = checkout -b
+	co = checkout
+	l = log
+	b = branch
+	ru = remote update
+[init]
+	defaultBranch = main
