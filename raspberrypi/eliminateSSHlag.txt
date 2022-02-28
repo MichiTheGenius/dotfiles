@@ -1,0 +1,4 @@
+# Add this line to the .bashrc file
+# this turns of the powersave of wifi -> eliminates lag
+
+sudo iw wlan0 set power_save off
