@@ -1,0 +1,16 @@
+add_newline = true
+
+
+[character]
+success_symbol = "[❯](bold yellow)"
+error_symbol = "[❯](bold red)"
+format = "$symbol "
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 20
+truncation_symbol = "…/"
+truncate_to_repo = false
+format = "[ $path]($style)[$read_only]($read_only_style) "
