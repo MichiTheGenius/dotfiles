@@ -57,7 +57,7 @@ mkfs.ext4 /dev/NAMEOFROOTPARTITION
 ## Mounting the partitions
 ```shell
 mount /dev/NAMEOFROOTPARTITION /mnt
-(is using legacy bios) mount /dev/NAMEOFBOOTPARTITION /mnt/boot
+(if using legacy bios) mount /dev/NAMEOFBOOTPARTITION /mnt/boot
 (optional) swapon /dev/NAMEOFSWAPPARTITION
 ```
 ---
