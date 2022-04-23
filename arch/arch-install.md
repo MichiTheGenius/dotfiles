@@ -164,10 +164,4 @@ systemctl enable NetworkManager
 >
 > unmount everything with `umount -R /mnt`
 >
-> reboot the system with `reboot`
-
-
-
-
-
-
+> reboot the system with `reboot` and enjoy!
