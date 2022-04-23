@@ -1,14 +1,14 @@
 # Install arch linux
 
 ## Change your keyboard layout. For german it would be:
-```properties
+```shell
 loadkeys de
 ```
 
 ---
 
 ## Set your clock to use ntp
-```properties
+```shell
 timedatectl set-ntp true
 ```
 ---
@@ -32,30 +32,30 @@ timedatectl set-ntp true
 
 > for UEFI
 >   
-```properties
+```shell
 mkfs.fat -F32 /dev/NAMEOFBOOTPARTITION
 ```
 
 > for legacy
 >
-```properties
+```shell
 mkfs.ext4 /dev/NAMEOFBOOTPARTITION
 ```
 
 ### The optional **swap** partition
-```properties
+```shell
 mkswap /dev/NAMEOFSWAPPARTITION
 ```
 
 ### The **root** partition
-```properties
+```shell
 mkfs.ext4 /dev/NAMEOFROOTPARTITION
 ```
 
 ---
 
 ## Mounting the partitions
-```properties
+```shell
 mount /dev/NAMEOFROOTPARTITION /mnt
 (is using legacy bios) mount /dev/NAMEOFBOOTPARTITION /mnt/boot
 (optional) swapon /dev/NAMEOFSWAPPARTITION
@@ -63,47 +63,47 @@ mount /dev/NAMEOFROOTPARTITION /mnt
 ---
 
 ## Installing the system
-```properties
+```shell
 pacstrap /mnt base base-devel linux linux-firmware vim
 ```
 
 ---
 
 ## Generating the filesystem table
-```properties
+```shell
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ---
 
 ## Chroot into the system
-```properties
-arch-chroot /mnt /bin/properties
+```shell
+arch-chroot /mnt /bin/shell
 ```
 
 ---
 
 ## Set timezone
-```properties
+```shell
 ln -sf /usr/share/zoneinfo/REGION/CITY /etc/localtime
 ```
 
 ---
 
 ## Set locale
-```properties
+```shell
 vim /etc/locale.gen
 ```
 > uncomment your locale
 
-```properties
+```shell
 locale-gen
 ```
 
 ---
 
 ## Set hostname
-```properties
+```shell
 vim /etc/hostname
 ```
 > enter a hostname and save the file
@@ -111,14 +111,14 @@ vim /etc/hostname
 ---
 
 ## Change the password of the root user
-```properties
+```shell
 passwd
 ```
 
 ---
 
 ## Add a new normal user
-```properties
+```shell
 useradd -m NAMEOFUSER
 usermod -aG wheel NAMEOFUSER
 EDITOR=vim visudo
@@ -134,7 +134,7 @@ passwd NAMEOFUSER
 > for UEFI
 >
 
-```properties
+```shell
 pacman -S efibootmgr dosfstools os-prober mtools grub
 mkdir /boot/EFI
 mount /dev/NAMEOFBOOTPARTITION /boot/EFI
@@ -145,7 +145,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 > for legacy
 >
 
-```properties
+```shell
 grub-install /dev/NAMEOFBOOTPARTITION
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
@@ -155,7 +155,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## Finishing touches
 > Install and enable networkmanager for internet access at fresh boot
 
-```properties
+```shell
 pacman -S networkmanager
 systemctl enable NetworkManager
 ```
