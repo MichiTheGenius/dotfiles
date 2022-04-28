@@ -78,7 +78,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 ## Chroot into the system
 ```shell
-arch-chroot /mnt /bin/shell
+arch-chroot /mnt /bin/bash
 ```
 
 ---
