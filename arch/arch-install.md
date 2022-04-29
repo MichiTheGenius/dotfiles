@@ -7,6 +7,21 @@ loadkeys de
 
 ---
 
+## Enable wifi
+> Enter the command `iwctl`
+>
+> Enter the command `device list` to see all available devices
+>
+> Enter `station NAMEOFDEVICE scan`
+>
+> Enter `station NAMEOFDEVICE get-networks` to list all available networks
+>
+> Enter `station NAMEOFDEVICE connect SSID`
+>
+> Enter the password when prompted and `exit` iwctl
+
+---
+
 ## Set your clock to use ntp
 ```shell
 timedatectl set-ntp true
@@ -64,7 +79,7 @@ mount /dev/NAMEOFROOTPARTITION /mnt
 
 ## Installing the system
 ```shell
-pacstrap /mnt base base-devel linux linux-firmware vim
+pacstrap /mnt base base-devel linux linux-firmware vim iwd
 ```
 
 ---
