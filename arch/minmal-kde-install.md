@@ -12,7 +12,13 @@ sudo pacman -S plasma-meta
 ```bash
 sudo pacman -S sddm && sudo systemctl enable sddm
 ```
-4. reboot and enjoy!
+4. Install `bluez` for bluetooth functionality and add user to `lp` group for bluetooth permissions
+```bash
+sudo pacman -S bluez bluez-utils
+sudo systemctl enable bluetooth
+usermod -aG lp NAMEOFUSER
+```
+5. reboot and enjoy!
 ```bash
 sudo reboot
 ```
