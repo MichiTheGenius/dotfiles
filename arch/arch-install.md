@@ -117,6 +117,18 @@ locale-gen
 
 ---
 
+## set keyboard layout
+```shell
+localectl set-keymap LAYOUT
+```
+> after installing a desktop environment and X11 run this command to change the graphical keymap
+
+```shell
+localectl set-x11-keymap LAYOUT
+```
+
+---
+
 ## Set hostname
 ```shell
 vim /etc/hostname
