@@ -14,7 +14,7 @@ sudo pacman -S sddm && sudo systemctl enable sddm
 ```
 ## Install `bluez` for bluetooth functionality and add user to `lp` group for bluetooth permissions
 ```bash
-sudo pacman -S bluez bluez-utils
+sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
 sudo systemctl enable bluetooth
 usermod -aG lp NAMEOFUSER
 ```
@@ -26,6 +26,13 @@ usermod -aG lp NAMEOFUSER
 ```bash
 rankmirrors /etc/pacman.d/mirrorlist
 ```
+
+## Disable iwd so that KDE and iwd do not conflict with each other
+> having iwd enabled causes conflicts wich leads to having no internet
+```bash
+sudo systemctl disable iwd
+```
+
 ## reboot and enjoy!
 ```bash
 sudo reboot
