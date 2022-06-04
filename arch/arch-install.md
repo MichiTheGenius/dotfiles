@@ -29,7 +29,7 @@ timedatectl set-ntp true
 ---
 
 ## Partition your disk with `cfdisk`
-> Enter the command `cfdisk`
+> Enter the command `cfdisk /dev/NAMEOFDRIVE`
 >
 > For UEFI choose the `gpt` disk label. For legacy use `dos`
 >
@@ -173,7 +173,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 >
 
 ```shell
-grub-install /dev/NAMEOFBOOTPARTITION
+grub-install /dev/NAMEOFDRIVE (NOT A PARTITION!)
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
