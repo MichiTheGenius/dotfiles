@@ -4,7 +4,6 @@
 sudo pacman -Syu neovim curl
 
 # create directories where init.vim will be stored.
-mkdir -p ~/.config
 mkdir -p ~/.config/nvim
 
 cp ./init.vim ~/.config/nvim
