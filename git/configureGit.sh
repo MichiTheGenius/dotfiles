@@ -8,7 +8,7 @@ mkdir -p ~/.ssh
 # configure the ssh keys for git
 
 echo 'Name your ssh key file git_ssh'
-ssh-keygen -t ed25519 -C "litzinger04@gmail.com"
+ssh-keygen -t ed25519 -C "michael.litzinger@proton.me"
 
 # start ssh-agent
 eval "$(ssh-agent -s)"
