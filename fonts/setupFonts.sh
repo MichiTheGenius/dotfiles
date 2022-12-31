@@ -15,6 +15,12 @@ then
 	echo "installing Hack NerdFont to $INSTALL_PATH"
 	sudo cp -r HackNerdFont/ $INSTALL_PATH
 fi
+
+if [ $FONT = "cascadia" ]
+then
+	echo "installing CascadiaCode NerdFont to $INSTALL_PATH"
+	sudo cp -r CascadiaNF/ $INSTALL_PATH
+fi
 sudo fc-cache -f
 
 echo "find the font with the 'fc-list | grep FONT_NAME' command"
