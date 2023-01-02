@@ -23,10 +23,4 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.fontSize": 16,
     "workbench.colorTheme": "Nord",
-    "http.proxySupport": "on",
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.renderColons": false,
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
 }
