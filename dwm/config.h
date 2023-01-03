@@ -2,6 +2,7 @@
 
 /* appearance */
 #include <X11/XF86keysym.h>
+#include "movestack.c"
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -67,7 +68,7 @@ static const char *colors[][3]      = {
 
 
 /* tagging */
-static const char *tags[] = { "", "", "", "4", "5" };
+static const char *tags[] = { "", "", "", "", "" };
 
 static const char *tagsel[][2] = {
     /* foreground, background */
@@ -118,11 +119,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browser[]  = { "firefox", NULL };
+static const char *pcmanfm[]  = { "pcmanfm", NULL };
 static const char *rofi[]  = { "rofi", "-show", "run", NULL };
+static const char *power_menu[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:rofi-power-menu", NULL };
 
 /* volume */
-static const char *upvol[] = { "/usr/bin/amixer", "set", "Master", "3%+", NULL };
-static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "3%-", NULL };
+static const char *upvol[] = { "/usr/bin/amixer", "set", "Master", "2%+", NULL };
+static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "2%-", NULL };
 static const char *mutevol[] = { "/usr/bin/amixer", "set", "Master", "toggle", NULL };
 
 /* brightness */
@@ -132,10 +135,12 @@ static const char *decbright[] = { "/bin/bash", "/home/michael/dwm/scripts/decbr
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	/*{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },*/
+	//{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
-	//{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser} },
+	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfm} },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = power_menu} },
 	{ 0     ,       XF86XK_AudioRaiseVolume,   spawn,          {.v = upvol} },
 	{ 0     ,       XF86XK_AudioLowerVolume,   spawn,          {.v = downvol} },
 	{ 0     ,       XF86XK_AudioMute,          spawn,          {.v = mutevol} },
@@ -143,6 +148,8 @@ static const Key keys[] = {
 	{ 0     ,       XF86XK_MonBrightnessDown,  spawn,          {.v = decbright} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
