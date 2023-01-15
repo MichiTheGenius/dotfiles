@@ -78,7 +78,7 @@ static const char *tagsel[][2] = {
 	{ "#272e33", "#7fbbb3" },
 	{ "#272e33", "#d699b6" },
 	{ "#272e33", "#83c092" },
-	{ "#272e33", "#83c092" },
+	{ "#272e33", "#e67e80" },
 };
 
 
@@ -141,7 +141,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser} },
-	{ MODKEY,                       XK_f,      spawn,          {.v = pcmanfm} },
+	{ MODKEY,                       XK_p,      spawn,          {.v = pcmanfm} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = power_menu} },
 	{ 0     ,       XF86XK_AudioRaiseVolume,   spawn,          {.v = upvol} },
 	{ 0     ,       XF86XK_AudioLowerVolume,   spawn,          {.v = downvol} },
@@ -160,7 +160,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	//{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
