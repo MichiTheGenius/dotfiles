@@ -1,0 +1,8 @@
+require("michael.nvimtree")
+require("michael.packer")
+require("michael.telescope")
+require("michael.treesitter")
+require("michael.settings")
+require("michael.lspzero")
+require("michael.color")
+require("michael.remap")

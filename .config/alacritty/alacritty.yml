@@ -3,7 +3,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.9
+  opacity: 0.8
 
   # Startup Mode (changes require restart)
   #
@@ -17,7 +17,7 @@ window:
   title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  dynamic_title: false
 
   # Window class (Linux/BSD only):
   #class:
@@ -41,6 +41,7 @@ window:
 multiplier: 3
 
 # Font configuration font:
+font:
   normal:
     family: CaskaydiaCove Nerd Font
     style: Medium
@@ -293,7 +294,7 @@ schemes:
       focused_match:
         foreground: "#44475a"
         background: "#ffb86c"
-      bar:
+      colors.footer_bar:
         background: "#282a36"
         foreground: "#f8f8f2"
     hints:
