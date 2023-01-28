@@ -1,16 +1,16 @@
-vim.cmd('set mouse=a')
-vim.cmd('set number')
-vim.cmd('set relativenumber')
-vim.cmd('set cursorline')
-
-vim.cmd('set cursorlineopt=both')
-vim.cmd('set hlsearch')
-vim.cmd('set ignorecase')
-vim.cmd('set smartcase')
-vim.cmd('set tabstop=4')
-vim.cmd('set softtabstop=4')
-vim.cmd('set shiftwidth=4')
-vim.cmd('set expandtab')
-vim.cmd('set autoindent')
-vim.cmd('set nowrap')
-vim.cmd('set signcolumn=yes')
+vim.opt.mouse = 'a'
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'both'
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.wrap = false
+vim.opt.signcolumn = 'yes'
+vim.opt.scrolloff = 3

@@ -27,6 +27,10 @@ return require('packer').startup(function(use)
         end,
     })
 
+    use 'Mofiqul/dracula.nvim'
+
+    use { "catppuccin/nvim", as = "catppuccin" }
+
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     use {

@@ -1,4 +1,4 @@
-vim.cmd([[colorscheme everforest]])
+vim.cmd.colorscheme('catppuccin-mocha')
 -- settings to make theme transparent
 vim.cmd([[highlight Normal guibg=none ctermbg=none]])
 vim.cmd([[highlight NonText guibg=none ctermbg=none]])

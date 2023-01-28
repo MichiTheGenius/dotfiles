@@ -1,5 +1,5 @@
-require("michael.nvimtree")
 require("michael.packer")
+require("michael.nvimtree")
 require("michael.telescope")
 require("michael.treesitter")
 require("michael.settings")
