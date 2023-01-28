@@ -3,6 +3,8 @@
 /* appearance */
 #include <X11/XF86keysym.h>
 #include "movestack.c"
+#include "themes/catppuccin.h"
+
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -16,24 +18,6 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 
-/* nord colors */
-static const char nord_polar_darkest_blue[]        = "#2E3440";
-static const char nord_polar_darker_blue[]        = "#3B4252";
-static const char nord_polar_lighter_dark_blue[]        = "#434C5E";
-static const char nord_polar_lightest_dark_blue[]        = "#4C566A";
-static const char nord_dark_white[]        = "#D8DEE9";
-static const char nord_darker_white[]        = "#E5E9F0";
-static const char nord_white[]        = "#ECEFF4";
-static const char nord_white_dark[]        = "#d8dee9";
-static const char nord_frost_light_blue[]        = "#8FBCBB";
-static const char nord_frost_darker_light_blue[]        = "#88C0D0";
-static const char nord_frost_lighter_dark_blue[]        = "#81A1C1";
-static const char nord_frost_dark_blue[]        = "#5E81AC";
-static const char nord_red[]        = "#BF616A";
-static const char nord_orange[]        = "#D08770";
-static const char nord_yellow[]        = "#EBCB8B";
-static const char nord_green[]        = "#A3BE8C";
-static const char nord_purple[]        = "#B48EAD";
 
 /* everforest colors */
 // Everforest
@@ -54,17 +38,9 @@ static const char *colors[][3]      = {
 /* everforest theme */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-	[SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+    [SchemeNorm] = { gray, black, black },
+	[SchemeSel]  = { gray, black,  sky  },
 };
-
-/* default theme */
-/*
-static const char *colors[][3]      = {
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-};
-*/
 
 
 /* tagging */
@@ -73,12 +49,12 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
 static const char *tagsel[][2] = {
     /* foreground, background */
-	{ "#272e33", "#a7c080" },
-	{ "#272e33", "#e69875" },
-	{ "#272e33", "#7fbbb3" },
-	{ "#272e33", "#d699b6" },
-	{ "#272e33", "#83c092" },
-	{ "#272e33", "#e67e80" },
+    { pink, black },
+	{ mauve, black },
+	{ red, black },
+	{ maroon, black },
+	{ peach, black },
+    { yellow, black }
 };
 
 
@@ -97,7 +73,6 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -122,6 +97,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browser[]  = { "firefox", NULL };
 static const char *pcmanfm[]  = { "pcmanfm", NULL };
+static const char *thunar[]   = { "thunar", NULL };
 static const char *rofi[]     = { "rofi", "-show", "run", NULL };
 static const char *power_menu[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:rofi-power-menu", NULL };
 
