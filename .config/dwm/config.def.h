@@ -6,7 +6,7 @@
 #include "themes/catppuccin.h"
 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 6;        /* gaps between windows */
+static const unsigned int gappx     = 3;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -19,14 +19,6 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 
 
-/* everforest colors */
-// Everforest
-static const char normbgcolor[]     = "#2f383e";
-static const char normbordercolor[] = "#272e33";
-static const char normfgcolor[]     = "#d8caac";
-static const char selfgcolor[]      = "#2f383e";
-static const char selbgcolor[]      = "#a7c080";
-static const char selbordercolor[]  = "#9da9a0";
 
 /* nord theme | format: fg, bg, border
 static const char *colors[][3]      = {
@@ -35,7 +27,7 @@ static const char *colors[][3]      = {
 };
 */
 
-/* everforest theme */
+/* catppuccin theme */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
     [SchemeNorm] = { gray, black, black },
@@ -69,7 +61,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -117,7 +109,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser} },
-	{ MODKEY,                       XK_p,      spawn,          {.v = pcmanfm} },
+	{ MODKEY,                       XK_e,      spawn,          {.v = thunar} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = power_menu} },
 	{ 0     ,       XF86XK_AudioRaiseVolume,   spawn,          {.v = upvol} },
 	{ 0     ,       XF86XK_AudioLowerVolume,   spawn,          {.v = downvol} },
