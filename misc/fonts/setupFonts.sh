@@ -16,10 +16,10 @@ then
 	sudo cp -r HackNerdFont/ $INSTALL_PATH
 fi
 
-if [ $FONT = "cascadia" ]
+if [ $FONT = "caskaydia" ]
 then
-	echo "installing CascadiaCode NerdFont to $INSTALL_PATH"
-	sudo cp -r CascadiaNF/ $INSTALL_PATH
+	echo "installing CaskaydiaCode NerdFont to $INSTALL_PATH"
+	sudo cp -r CaskaydiaNF/ $INSTALL_PATH
 fi
 sudo fc-cache -f
 
