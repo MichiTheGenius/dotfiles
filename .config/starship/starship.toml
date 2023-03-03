@@ -1,9 +1,8 @@
 add_newline = true
 
-
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[>](#04a5e5)"
+error_symbol = "[>](red)"
 format = "$symbol "
 
 [line_break]
@@ -13,9 +12,9 @@ disabled = false
 truncation_length = 20
 truncation_symbol = "…/"
 truncate_to_repo = false
-style = "bold cyan"
+style = "bold #179299"
 read_only_style = "bold red"
-format = "[ ](bold green)[$path]($style)[$read_only]($read_only_style) "
+format = "[ ](#7287fd)[$path]($style)[$read_only]($read_only_style) "
 
 [python]
 disabled = true
