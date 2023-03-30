@@ -5,4 +5,10 @@
 
 - copy the `aliases.sh` and `pfetch_conf.sh` files in the `zsh` directory you just created
 
-- copy the 3 plugin folders inside the `/usr/share/zsh/plugins` directory
+- clone the 3 plugins from GitHub inside the `/usr/share/zsh/plugins` directory
+
+```bash
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git /usr/share/zsh/plugins/zsh-autosuggestions
+sudo git clone https://github.com/joshskidmore/zsh-fzf-history-search.git /usr/share/zsh/plugins/zsh-fzf-history-search
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/plugins/zsh-syntax-highlighting
+```
