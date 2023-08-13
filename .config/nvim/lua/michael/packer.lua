@@ -20,13 +20,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use({
-        "neanias/everforest-nvim",
-        config = function()
-            require("everforest").setup()
-        end,
-    })
-
     use 'Mofiqul/dracula.nvim'
 
     use { "catppuccin/nvim", as = "catppuccin" }
@@ -55,4 +48,9 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
 end)
